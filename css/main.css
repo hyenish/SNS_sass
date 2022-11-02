@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -74,19 +75,20 @@ a {
   display: flex;
   padding: 16px;
   position: relative;
+  /* 내 말풍선 */
 }
-.preview .preview_column .preview_pic {
+.preview .preview_pic {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: #fff;
   margin-right: 16px;
 }
-.preview .preview_column .preview_pic img {
+.preview .preview_pic img {
   object-fit: cover;
   overflow: hidden;
 }
-.preview .preview_column .preview_nick {
+.preview .preview_nick {
   width: 50vw;
   font-size: 0.85em;
   margin-bottom: 6px;
@@ -94,7 +96,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.preview .preview_column .preview_msg {
+.preview .preview_msg {
   width: 50vw;
   font-size: 0.82em;
   color: #919191;
@@ -105,15 +107,14 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.preview .preview_column .preview_time {
+.preview .preview_time {
   position: absolute;
   top: 10px;
   right: 16px;
   font-size: 0.7em;
   color: #b6b6b6;
 }
-
-.bubble {
+.preview .bubble {
   height: auto;
   width: 100%;
   border-radius: 4px;
@@ -123,7 +124,7 @@ a {
   padding: 10px;
   font-size: 0.9em;
 }
-.bubble::before {
+.preview .bubble::before {
   height: 0;
   width: 0;
   border-radius: 0;
@@ -133,6 +134,27 @@ a {
   left: -10px;
   border-bottom: 10px solid transparent;
   border-right: 10px solid #fff;
+}
+.preview.my {
+  flex-direction: row-reverse;
+}
+.preview.my .bubble_wrap {
+  flex-direction: row-reverse;
+}
+.preview.my .preview_pic {
+  display: none;
+}
+.preview.my .preview_nick {
+  display: none;
+}
+.preview.my .bubble {
+  background-color: #F3DDD1;
+}
+.preview.my .bubble::before {
+  left: auto;
+  right: -10px;
+  border-top: 10px solid #F3DDD1;
+  border-right: 10px solid transparent;
 }
 
 .login_container {
@@ -259,10 +281,11 @@ a.preview_wrap .preview:hover {
   max-width: 700px;
 }
 .bubble_wrap .bubble_time {
-  font-size: 0.7em;
   display: flex;
+  min-width: 60px;
   align-items: self-end;
-  padding-left: 6px;
+  padding: 0 6px 0;
+  font-size: 0.7em;
 }
 
 .chat_form {
