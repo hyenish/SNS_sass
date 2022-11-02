@@ -231,7 +231,7 @@ a.preview_wrap .preview:hover {
 .chat_screen {
   height: calc(100% - 140px);
   overflow: auto;
-  background-color: #F3DDD1;
+  background-color: #F9C067;
 }
 .chat_screen .chat_screen_bar {
   position: sticky;
@@ -243,7 +243,7 @@ a.preview_wrap .preview:hover {
 }
 
 .chat_user {
-  background-color: #F3DDD1;
+  background-color: #F9C067;
   box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -285,7 +285,7 @@ a.preview_wrap .preview:hover {
 }
 .chat_form .chat_form_util .chat_form_util_plugin i {
   margin-right: 10px;
-  color: #E36B12;
+  color: #585858;
   line-height: 35px;
 }
 .chat_form .chat_form_util .chat_form_util_submit .chat_form_btn {
@@ -294,7 +294,7 @@ a.preview_wrap .preview:hover {
   border-radius: 6px;
   border: none;
   color: #fff;
-  background-color: #E36B12;
+  background-color: #F9C067;
 }
 
 /*# sourceMappingURL=main.css.map */

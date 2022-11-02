@@ -4,7 +4,7 @@
 .chat_screen {
   height: calc(100% - 140px);
   overflow: auto;
-  background-color: $light;
+  background-color: $bg-color;
 
   .chat_screen_bar {
     position: sticky;
@@ -18,7 +18,7 @@
 }
 
 .chat_user {
-  background-color: $light;
+  background-color: $bg-color;
   box-shadow: .5px .5px 1px $opacityBlack;
 }
 
@@ -60,7 +60,7 @@
     .chat_form_util_plugin {
       i {
         margin-right: 10px;
-        color: $main-color;
+        color: $gray1;
         line-height: 35px //전송btn의 높이값
       }
     }
@@ -70,7 +70,7 @@
         @include set-box(35px, 70px, 6px);
         border: none;
         color: $white;
-        background-color: $main-color;
+        background-color: $bg-color;
       }
     }
   }
